@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using vega.Data;
 
 namespace vega.Migrations
 {
     [DbContext(typeof(VegaDbContext))]
-    partial class VegaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190105065615_FeatureFKRemove")]
+    partial class FeatureFKRemove
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,11 +27,15 @@ namespace vega.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("FeatureId");
+
                     b.Property<string>("FeatureName")
                         .IsRequired()
                         .HasMaxLength(255);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FeatureId");
 
                     b.ToTable("Features");
                 });
@@ -66,6 +72,13 @@ namespace vega.Migrations
                     b.HasIndex("MakeId");
 
                     b.ToTable("Models");
+                });
+
+            modelBuilder.Entity("vega.Models.Feature", b =>
+                {
+                    b.HasOne("vega.Models.Feature")
+                        .WithMany("Features")
+                        .HasForeignKey("FeatureId");
                 });
 
             modelBuilder.Entity("vega.Models.Model", b =>
