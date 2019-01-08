@@ -13,8 +13,7 @@ export class VehicleFormComponent implements OnInit {
   models: any = [];
   
   vehicle: any = {
-    features: [
-    ],
+    features: [],
     contact: {}
   };
 
@@ -35,7 +34,7 @@ export class VehicleFormComponent implements OnInit {
 
   onMakeChange(){
     //console.log("Vehicle", this.vehicle);
-   var selectedMake = this.makes.find(m => m.id == this.vehicle.make)
+   var selectedMake = this.makes.find(m => m.id == this.vehicle.makeId)
     this.models = selectedMake ? selectedMake.models : [];  
   }
 
@@ -51,7 +50,7 @@ export class VehicleFormComponent implements OnInit {
   }
 
   submit(){
-    this.vehicleService.create(this.vehicle)
+    return this.vehicleService.create(this.vehicle)
     .subscribe(x => console.log(x));
   }
 

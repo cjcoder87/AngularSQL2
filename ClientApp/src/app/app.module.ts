@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
+
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
@@ -34,7 +35,7 @@ import { InterpretationComponent } from './interpretation/interpretation.compone
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'vehicles/new', component: VehicleFormComponent},
-      { path: 'agent-event', component:  AgentEntryComponent},
+      { path: 'agent-entry', component:  AgentEntryComponent},
       { path: 'interpretation', component:  InterpretationComponent},
       { path: 'confidence', component:  ConfidenceComponent},
       { path: 'counter', component: CounterComponent },

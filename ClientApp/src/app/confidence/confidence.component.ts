@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-confidence',
   templateUrl: './confidence.component.html',
@@ -10,6 +11,9 @@ export class ConfidenceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+
+   
     (<HTMLInputElement>document.getElementById('finalPO123')).value = (<HTMLInputElement>document.getElementById('intPO123')).value;
     (<HTMLInputElement>document.getElementById('finalSection')).value = (<HTMLInputElement>document.getElementById('intSection')).value;
     (<HTMLInputElement>document.getElementById('finalProductFamily')).value = (<HTMLInputElement>document.getElementById('intProductFamily')).value;
@@ -17,17 +21,18 @@ export class ConfidenceComponent implements OnInit {
     (<HTMLInputElement>document.getElementById('finalProductDescription')).value = (<HTMLInputElement>document.getElementById('intProductDescription')).value;
     (<HTMLInputElement>document.getElementById('finalListPrice')).value = (<HTMLInputElement>document.getElementById('intListPrice')).value;
     (<HTMLInputElement>document.getElementById('finalPartNumber')).value = (<HTMLInputElement>document.getElementById('intPartNumber')).value;
-    (<HTMLInputElement>document.getElementById('finalDiscount')).value = (<HTMLInputElement>document.getElementById('intfinalDiscount')).value;
-    // (<HTMLInputElement>document.getElementById('finalUsageIndicator')).value = (<HTMLInputElement>document.getElementById('intfinalUsageIndicator')).value;;
-    // (<HTMLInputElement>document.getElementById('finalUsageStartDate')).value = con10;
-    // (<HTMLInputElement>document.getElementById('finalUnitofMeasure')).value = con11;
-    // (<HTMLInputElement>document.getElementById('finalUnitQuanity')).value = con12;
-    // (<HTMLInputElement>document.getElementById('finalNetUnitPrice')).value = con13;
-    // (<HTMLInputElement>document.getElementById('finalLicenseQuanity')).value = con14;
-    // (<HTMLInputElement>document.getElementById('finalUsageCountry')).value = con15;
-    // (<HTMLInputElement>document.getElementById('finalExtendedAmount')).value = con16;
-    
+    (<HTMLInputElement>document.getElementById('finalDiscount')).value = (<HTMLInputElement>document.getElementById('intDiscount')).value;
+    (<HTMLInputElement>document.getElementById('finalUsageIndicator')).value = (<HTMLInputElement>document.getElementById('intUsageIndicator')).value;
+    (<HTMLInputElement>document.getElementById('finalUsageStartDate')).value = (<HTMLInputElement>document.getElementById('intUsageStartDate')).value;
+    (<HTMLInputElement>document.getElementById('finalUnitofMeasure')).value = (<HTMLInputElement>document.getElementById('intUnitofMeasure')).value;
+    (<HTMLInputElement>document.getElementById('finalUnitQuanity')).value =  (<HTMLInputElement>document.getElementById('intUnitQuanity')).value;
+    (<HTMLInputElement>document.getElementById('finalNetUnitPrice')).value = (<HTMLInputElement>document.getElementById('intNetUnitPrice')).value;
+    (<HTMLInputElement>document.getElementById('finalLicenseQuanity')).value = (<HTMLInputElement>document.getElementById('intLicenseQuanity')).value;
+    (<HTMLInputElement>document.getElementById('finalUsageCountry')).value = (<HTMLInputElement>document.getElementById('intUsageCountry')).value;
+    (<HTMLInputElement>document.getElementById('finalExtendedAmount')).value = (<HTMLInputElement>document.getElementById('intExtendedAmount')).value;
+
   }
+    
 
   public sync()
 {
@@ -64,6 +69,10 @@ export class ConfidenceComponent implements OnInit {
   (<HTMLInputElement>document.getElementById('finalLicenseQuanity')).value = con14;
   (<HTMLInputElement>document.getElementById('finalUsageCountry')).value = con15;
   (<HTMLInputElement>document.getElementById('finalExtendedAmount')).value = con16;
+
+  if (con1 == "" || con1 == null || con1 == undefined){
+    (<HTMLInputElement>document.getElementById('finalPO123')).value = (<HTMLInputElement>document.getElementById('intPO123')).value;
+  }
   
 
 }

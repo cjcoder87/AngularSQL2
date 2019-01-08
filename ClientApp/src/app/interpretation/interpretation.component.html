@@ -5,22 +5,22 @@
 <section class="col-4">
 <form >
     <h2>Agent Entry</h2>
-    <label for="agentPO123">PO123<input id="agentPO123" name="" class="form-control" readonly type="text"></label>
-    <label for="agentSection">Section<input readonly id="agentSection" class="form-control" name="" type="text"></label>
-    <label for="agentProductFamily">Product Family<input readonly  id="agentProductFamily" name="" type="text"></label>
-    <label for="agentProductFamilySubType">Product Family Sub Type<input readonly id="agentProductFamilySubType" name="" type="text"></label>
-    <label for="agentProductDescription">Product Description<input readonly id="agentProductDescription" name="" type="text"></label>
-    <label for="agentPartNumber">Part Number<input readonly id="agentPartNumber" name="" type="text"></label>
-    <label for="agentListPrice">List Price (Billing Currency)<input readonly id="agentListPrice" name="" type="text"></label>
-    <label for="agentDiscount">Discount<input readonly id="agentDiscount" name="" type="text"></label>
-    <label for="agentUsageIndicator">Usage Indicator<input readonly class="form-control"  id="agentUsageIndicator" name="" type="text"></label>
-    <label for="agentUsageStartDate">Usade Start Date<input readonly id="agentUsageStartDate"  class="form-control" name="" type="date"></label>
-    <label for="agentUnitofMeasure">Unit of Measure<input readonly id="agentUnitofMeasure" name="" type="text"></label>
-    <label for="agentUnitQuanity">Unit Quantity<input readonly id="agentUnitQuanity" name="" type="text"></label>
-    <label for="agentNetUnitPrice">Net Unit Price (Billing Currency)<input class="form-control"  readonly id="agentNetUnitPrice" name="" type="text"></label>
-    <label for="agentLicenseQuantity">License Quantity<input readonly id="agentLicenseQuanity" class="form-control"  name="" type="text"></label>
-    <label for="agentUsageCountry">Usage Country<input readonly id="agentUsageCountry" name="" type="text"></label>
-    <label for="agentExtendedAmount">Extended Amount<input readonly id="agentExtendedAmount"  class="form-control"  name="" type="text"></label>
+    <label for="finalPO123">PO123<input readonly id="finalPO123" name="" type="text" change="sync()"></label>
+<label for="finalSection">Section<input readonly id="finalSection" name="" type="text"></label>
+<label for="finalProductFamily">Product Family<input readonly id="finalProductFamily" name="" type="text"></label>
+<label for="finalProductFamilySubType">Product Family Sub Type<input readonly id="finalProductFamilySubType" name="" type="text"></label>
+<label for="finalProductDescription">Product Description<input id="finalProductDescription" name="" type="text"></label>
+<label for="finalPartNumber">Part Number<input id="finalPartNumber" readonly name="" type="text"></label>
+<label for="ListPrice">List Price (Billing Currency)<input readonly id="ListPrice" name="" type="text"></label>
+<label for="Discount">Discount<input id="Discount" name="" readonly type="text"></label>
+<label for="UsageIndicator">Usage Indicator<input id="UsageIndicator" readonly name="" type="text"></label>
+<label for="UsageStartDate">Usade Start Date<input id="UsageStartDate" readonly name="" type="date"></label>
+<label for="UnitofMeasure">Unit of Measure<input id="UnitofMeasure" readonly name="" type="text"></label>
+<label for="UnitQuanity">Unit Quantity<input id="UnitQuanity" name="" readonly type="text"></label>
+<label for="NetUnitPrice">Net Unit Price (Billing Currency)<input readonly id="NetUnitPrice" name="" type="text"></label>
+<label for="LicenseQuantity">License Quantity<input id="finalLicenseQuanity" readonly name="" type="text"></label>
+<label for="UsageCountry">Usage Country<input id="UsageCountry" name="" readonly type="text"></label>
+<label for="ExtendedAmount">Extended Amount<input id="ExtendedAmount" readonly name="" type="text"></label>
 
 </form>
 </section>
@@ -43,8 +43,8 @@
 <label for="intUnitQuanity">Unit Quantity<input id="intUnitQuanity" name="" type="text"></label>
 <label for="intNetUnitPrice">Net Unit Price (Billing Currency)<input id="intNetUnitPrice" name="" type="text"></label>
 <label for="intLicenseQuantity">License Quantity<input id="intLicenseQuanity" name="" type="text"></label>
-<label for="UsageCountry">Usage Country<input id="UsageCountry" name="" type="text"></label>
-<label for="ExtendedAmount">Extended Amount<input id="ExtendedAmount" name="" type="text"></label>
+<label for="intUsageCountry">Usage Country<input id="intUsageCountry" name="" type="text"></label>
+<label for="intExtendedAmount">Extended Amount<input id="intExtendedAmount" name="" type="text"></label>
 <button type="button">Save Interpretation</button>
 </form>
 
@@ -54,22 +54,22 @@
     
 <form (ngSubmit)="saveInterpretation()">
     <h2>Final Entry</h2>
-<label for="finalPO123">PO123<input id="finalPO123" name="" type="text" change="sync()"></label>
-<label for="finalSection">Section<input id="finalSection" name="" type="text"></label>
-<label for="finalProductFamily">Product Family<input id="finalProductFamily" name="" type="text"></label>
-<label for="finalProductFamilySubType">Product Family Sub Type<input id="finalProductFamilySubType" name="" type="text"></label>
+<label for="finalPO123">PO123<input readonly id="finalPO123" name="" type="text" change="sync()"></label>
+<label for="finalSection">Section<input readonly id="finalSection" name="" type="text"></label>
+<label for="finalProductFamily">Product Family<input readonly id="finalProductFamily" name="" type="text"></label>
+<label for="finalProductFamilySubType">Product Family Sub Type<input readonly id="finalProductFamilySubType" name="" type="text"></label>
 <label for="finalProductDescription">Product Description<input id="finalProductDescription" name="" type="text"></label>
-<label for="finalPartNumber">Part Number<input id="finalPartNumber" name="" type="text"></label>
-<label for="ListPrice">List Price (Billing Currency)<input id="ListPrice" name="" type="text"></label>
-<label for="Discount">Discount<input id="Discount" name="" type="text"></label>
-<label for="UsageIndicator">Usage Indicator<input id="UsageIndicator" name="" type="text"></label>
-<label for="UsageStartDate">Usade Start Date<input id="UsageStartDate" name="" type="date"></label>
-<label for="UnitofMeasure">Unit of Measure<input id="UnitofMeasure" name="" type="text"></label>
-<label for="UnitQuanity">Unit Quantity<input id="UnitQuanity" name="" type="text"></label>
-<label for="NetUnitPrice">Net Unit Price (Billing Currency)<input id="NetUnitPrice" name="" type="text"></label>
-<label for="LicenseQuantity">License Quantity<input id="finalLicenseQuanity" name="" type="text"></label>
-<label for="UsageCountry">Usage Country<input id="UsageCountry" name="" type="text"></label>
-<label for="ExtendedAmount">Extended Amount<input id="ExtendedAmount" name="" type="text"></label>
+<label for="finalPartNumber">Part Number<input id="finalPartNumber" readonly name="" type="text"></label>
+<label for="finalListPrice">List Price (Billing Currency)<input readonly id="finalListPrice" name="" type="text"></label>
+<label for="finalDiscount">Discount<input id="finalDiscount" name="" readonly type="text"></label>
+<label for="finalUsageIndicator">Usage Indicator<input id="finalUsageIndicator" readonly name="" type="text"></label>
+<label for="finalUsageStartDate">Usade Start Date<input id="finalUsageStartDate" readonly name="" type="date"></label>
+<label for="finalUnitofMeasure">Unit of Measure<input id="finalUnitofMeasure" readonly name="" type="text"></label>
+<label for="finalUnitQuanity">Unit Quantity<input id="finalUnitQuanity" name="" readonly type="text"></label>
+<label for="finalNetUnitPrice">Net Unit Price (Billing Currency)<input readonly id="NetUnitPrice" name="" type="text"></label>
+<label for="finalLicenseQuantity">License Quantity<input id="finalLicenseQuanity" readonly name="" type="text"></label>
+<label for="finalUsageCountry">Usage Country<input id="finalUsageCountry" name="" readonly type="text"></label>
+<label for="finalExtendedAmount">Extended Amount<input id="finalExtendedAmount" readonly name="" type="text"></label>
 <button type="button">Save Interpretation</button>
 </form>
 
