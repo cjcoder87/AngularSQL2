@@ -1,0 +1,78 @@
+<h1>Confidence Entry</h1>
+
+<main class="container-fluid">
+  <section class="row">
+<section class="col-4">
+<form>
+  <h2>Int Entry</h2>
+<label for="intPO123">PO123<input id="intPO123" name="" class="form-control" value="2" type="text"></label>
+<label for="intSection">Section<input readonly="readonly" id="intSection" class="form-control" name="" type="text"></label>
+<label for="intProductFamily">Product Family<input class="form-control" readonly="readonly"  id="intProductFamily" name="" type="text"></label>
+<label for="intProductFamilySubType">Product Family Sub Type<input class="form-control" readonly="readonly" id="intProductFamilySubType" name="" type="text"></label>
+<label for="intProductDescription">Product Description<input class="form-control" readonly="readonly" id="intProductDescription" name="" type="text"></label>
+<label for="intPartNumber">Part Number<input readonly="readonly" class="form-control" id="intPartNumber" name="" type="text"></label>
+<label for="intListPrice">List Price (Billing Currency)<input class="form-control" readonly="readonly" id="intListPrice" name="" type="text"></label>
+<label for="intDiscount">Discount<input readonly="readonly" id="intDiscount" class="form-control" name="" type="text"></label>
+<label for="intUsageIndicator">Usage Indicator<input readonly="readonly" class="form-control"  id="intUsageIndicator" name="" type="text"></label>
+<label for="intUsageStartDate">Usade Start Date<input readonly="readonly"  id="intUsageStartDate"  class="form-control" name="" type="date"></label>
+<label for="intUnitofMeasure">Unit of Measure<input readonly="readonly" class="form-control" id="intUnitofMeasure" name="" type="text"></label>
+<label for="intUnitQuanity">Unit Quantity<input readonly="readonly" id="intUnitQuanity" class="form-control" name="" type="text"></label>
+<label for="intNetUnitPrice">Net Unit Price (Billing Currency)<input class="form-control"  readonly="readonly" id="intNetUnitPrice" name="" type="text"></label>
+<label for="intLicenseQuantity">License Quantity<input readonly="readonly" id="intLicenseQuanity" class="form-control"  name="" type="text"></label>
+<label for="intUsageCountry">Usage Country<input readonly="readonly" id="intUsageCountry" name="" class="form-control" type="text"></label>
+<label for="intExtendedAmount">Extended Amount<input readonly="readonly" id="intExtendedAmount"  class="form-control"  name="" type="text"></label>
+
+</form>
+</section>
+
+<section class="col-4">
+<form>
+    <h2>Con Entry</h2>
+    <label for="conPO123">PO123<input id="conPO123" name="" (keyup)="sync()" class="form-control" type="text"></label>
+    <label for="conSection">Section<input id="conSection" (keyup)="sync()" class="form-control" name="" type="text"></label>
+    <label for="conProductFamily">Product Family<input (keyup)="sync()" class="form-control" id="conProductFamily" name="" type="text"></label>
+    <label for="conProductFamilySubType">Product Family Sub Type<input class="form-control" (keyup)="sync()" id="conProductFamilySubType" name="" type="text"></label>
+    <label for="conProductDescription">Product Description<input (keyup)="sync()" class="form-control" id="conProductDescription" name="" type="text"></label>
+    <label for="conPartNumber">Part Number<input id="conPartNumber" (keyup)="sync()" class="form-control" name="" type="text"></label>
+    <label for="conListPrice">List Price (Billing Currency)<input (keyup)="sync()" id="conListPrice" class="form-control" name="" type="text"></label>
+    <label for="conDiscount">Discount<input id="conDiscount" (keyup)="sync()" name="" class="form-control" type="text"></label>
+    <label for="conUsageIndicator">Usage Indicator<input (keyup)="sync()" class="form-control"  id="conUsageIndicator" name="" type="text"></label>
+    <label for="conUsageStartDate">Usade Start Date<input (change)="sync()" id="conUsageStartDate"  class="form-control" name="" type="date"></label>
+    <label for="conUnitofMeasure">Unit of Measure<input (keyup)="sync()" id="conUnitofMeasure" class="form-control" name="" type="text"></label>
+    <label for="conUnitQuanity">Unit Quantity<input (keyup)="sync()" id="conUnitQuanity" class="form-control" name="" type="text"></label>
+    <label for="conNetUnitPrice">Net Unit Price (Billing Currency)<input (keyup)="sync()" class="form-control"  id="conNetUnitPrice" name="" type="text"></label>
+    <label for="conLicenseQuanity">License Quantity<input (keyup)="sync()" id="conLicenseQuanity" class="form-control"  name="" type="text"></label>
+    <label for="conUsageCountry">Usage Country<input (keyup)="sync()" id="conUsageCountry" name="" class="form-control" type="text"></label>
+    <label for="conExtendedAmount">Extended Amount<input (keyup)="sync()" id="conExtendedAmount"  class="form-control"  name="" type="text"></label>
+<button type="button">Save Confidence</button>
+
+</form>
+
+</section>
+
+<section class="col-4">
+    <form (ngSubmit)="saveConfidence()">
+        <h2>Final Entry</h2>
+        <label for="finalPO123">PO123<input id="finalPO123" name="" class="form-control" readonly="readonly" type="text"></label>
+<label for="finalSection">Section<input readonly="readonly" id="finalSection" class="form-control" name="" type="text"></label>
+<label for="finalProductFamily">Product Family<input class="form-control" readonly="readonly"  id="finalProductFamily" name="" type="text"></label>
+<label for="finalProductFamilySubType">Product Family Sub Type<input class="form-control" readonly="readonly" id="finalProductFamilySubType" name="" type="text"></label>
+<label for="finalProductDescription">Product Description<input class="form-control" readonly="readonly" id="finalProductDescription" name="" type="text"></label>
+<label for="finalPartNumber">Part Number<input readonly="readonly" class="form-control" id="finalPartNumber" name="" type="text"></label>
+<label for="finalListPrice">List Price (Billing Currency)<input class="form-control" readonly="readonly" id="finalListPrice" name="" type="text"></label>
+<label for="finalDiscount">Discount<input readonly="readonly" id="finalDiscount" class="form-control" name="" type="text"></label>
+<label for="finalUsageIndicator">Usage Indicator<input readonly="readonly" class="form-control"  id="finalUsageIndicator" name="" type="text"></label>
+<label for="finalUsageStartDate">Usade Start Date<input readonly="readonly"  id="finalUsageStartDate"  class="form-control" name="" type="date"></label>
+<label for="finalUnitofMeasure">Unit of Measure<input readonly="readonly" class="form-control" id="finalUnitofMeasure" name="" type="text"></label>
+<label for="finalUnitQuanity">Unit Quantity<input readonly="readonly" id="finalUnitQuanity" class="form-control" name="" type="text"></label>
+<label for="finalNetUnitPrice">Net Unit Price (Billing Currency)<input class="form-control"  readonly="readonly" id="finalNetUnitPrice" name="" type="text"></label>
+<label for="finalLicenseQuantity">License Quantity<input readonly="readonly" id="finalLicenseQuanity" class="form-control"  name="" type="text"></label>
+<label for="finalUsageCountry">Usage Country<input readonly="readonly" id="finalUsageCountry" name="" class="form-control" type="text"></label>
+<label for="finalExtendedAmount">Extended Amount<input readonly="readonly" id="finalExtendedAmount"  class="form-control"  name="" type="text"></label>
+    
+    </form>
+    
+    </section>
+
+</section>
+</main>

@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
+import { AgentEntryComponent } from './agent-entry/agent-entry.component';
+import { ConfidenceComponent } from './confidence/confidence.component';
+import { InterpretationComponent } from './interpretation/interpretation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    VehicleFormComponent
+    VehicleFormComponent,
+    AgentEntryComponent,
+    ConfidenceComponent,
+    InterpretationComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,8 +34,11 @@ import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'vehicles/new', component: VehicleFormComponent},
+      { path: 'agent-event', component:  AgentEntryComponent},
+      { path: 'interpretation', component:  InterpretationComponent},
+      { path: 'confidence', component:  ConfidenceComponent},
       { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'fetch-data', component: FetchDataComponent }
     ])
   ],
   providers: [VehicleService],

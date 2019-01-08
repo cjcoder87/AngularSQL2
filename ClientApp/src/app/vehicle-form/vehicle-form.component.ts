@@ -12,7 +12,11 @@ export class VehicleFormComponent implements OnInit {
   features: any = [];
   models: any = [];
   
-  vehicle: any = {};
+  vehicle: any = {
+    features: [
+    ],
+    contact: {}
+  };
 
   constructor(private vehicleService: VehicleService) { }
 
@@ -32,15 +36,23 @@ export class VehicleFormComponent implements OnInit {
   onMakeChange(){
     //console.log("Vehicle", this.vehicle);
    var selectedMake = this.makes.find(m => m.id == this.vehicle.make)
-    this.models = selectedMake ? selectedMake.models : [];
-    
+    this.models = selectedMake ? selectedMake.models : [];  
   }
 
 
-  saveAgent(){
-    //console.log("Vehicle", this.vehicle);
-   var selectedMake = this.makes.find(m => m.id == this.vehicle.make)
-    this.models = selectedMake ? selectedMake.models : [];
-    
+  onFeatureToggle(featureId, $event){
+    if($event.target.checked)
+    this.vehicle.features.push(featureId);
+    else{
+      var index = this.vehicle.features.indexOf(featureId);
+      this.vehicle.features.splice(index, 1);
+    }
+
   }
+
+  submit(){
+    this.vehicleService.create(this.vehicle)
+    .subscribe(x => console.log(x));
+  }
+
 }
