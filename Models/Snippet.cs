@@ -1,9 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+
 namespace vega.Models
 {
-    public class Snippet
+    public partial class Snippet
     {
-        public int Id { get; set; }
+        public Snippet()
+        {
+            Footers = new HashSet<Footers>();
+            FormFields = new HashSet<FormFields>();
+        }
 
-       
+        public string Snippet1 { get; set; }
+        public int SnippetId { get; set; }
+
+        public virtual ICollection<Footers> Footers { get; set; }
+        public virtual ICollection<FormFields> FormFields { get; set; }
     }
 }
